@@ -18,6 +18,7 @@
           "recallNumber": "5832",
           "notificationDate": "2026-06-18",
           "component": "乗車装置（シートベルト）",
+          "partKey": "seatbelt",
           "summary": "二列目座席のシートベルト装着状態が正しく警報されないおそれ",
           "remedy": "シートベルトバックルおよび関連部品を点検し、必要に応じて対策品へ交換する",
           "repairStatus": "NOT_REPAIRED"
@@ -36,6 +37,7 @@
           "recallNumber": "5832",
           "notificationDate": "2026-06-18",
           "component": "乗車装置（シートベルト）",
+          "partKey": "seatbelt",
           "summary": "二列目座席のシートベルト装着状態が正しく警報されないおそれ",
           "remedy": "シートベルトバックルおよび関連部品を点検し、必要に応じて対策品へ交換する",
           "repairStatus": "REPAIRED"
@@ -54,6 +56,7 @@
           "recallNumber": "5821",
           "notificationDate": "2026-05-27",
           "component": "電気装置（コンビネーションメータ）",
+          "partKey": "meter",
           "summary": "始動時にコンビネーションメータが正しく起動せず、画面の一部が表示されないおそれ",
           "remedy": "コンビネーションメータの制御プログラムを対策仕様へ更新する",
           "repairStatus": "REPAIRED"
@@ -72,6 +75,7 @@
           "recallNumber": "5888",
           "notificationDate": "2026-10-07",
           "component": "電気装置（モータ制御用コンピュータ）",
+          "partKey": "motor-ecu",
           "summary": "警告灯が点灯し、最悪の場合は走行不能となるおそれ",
           "remedy": "モータ制御用コンピュータの制御プログラムを対策仕様へ更新する",
           "repairStatus": "NOT_REPAIRED"
