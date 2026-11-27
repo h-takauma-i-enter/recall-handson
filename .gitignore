@@ -28,5 +28,5 @@ playwright/.cache/
 !.vscode/extensions.json
 .idea/
 
-# 3Dモデル（ライセンス表記なしのため同梱しない。ADR-002）
+# 3Dモデル（ライセンス表記なしのため同梱しない）
 public/models/rav4.glb

@@ -39,7 +39,7 @@ Claude Codeを単なるコード生成ツールとして使うのではなく、
 
 ```text
 事前準備済み
-PRD.md + vehicles.json + CLAUDE.md + ADR-002（3D表示の判断）+ 3Dモデル
+PRD.md + vehicles.json + CLAUDE.md + 3Dモデル
         ↓
 ① PRDを読ませ、Claudeの質問に答えて要件を固める
         ↓
@@ -93,9 +93,6 @@ recall-handson/
 ├── .gitignore
 ├── data/
 │   └── vehicles.json
-├── docs/
-│   └── adr/
-│       └── ADR-002.md
 └── public/
     └── models/
         ├── car-concept.glb
@@ -111,9 +108,6 @@ recall-handson/
   - リコール届出情報は実在情報を参考にする
   - 車台番号、個別車両、改修状況は架空とする
   - 各リコールに、3Dで強調する部位を表す`partKey`を持たせる
-- `docs/adr/ADR-002.md`
-  - 3D車両ビューの実装方法と、3Dモデルの選定・配布方法の判断を記録したADR
-  - 講師が事前に用意する。STEP 4で参加者が作る`ADR-001.md`（技術構成）の参考例にもなる
 - `public/models/car-concept.glb`
   - 既定の3D車両モデル（Car Concept、CC-BY 4.0）
 - `public/models/rav4.glb`（任意）
@@ -185,7 +179,7 @@ AskUserQuestionツールを使って私に質問してください。
 
 - PRDに答えが書いてあることは質問しない
 - 判定条件と入力チェックはPRDのとおりで確定済みとし、質問しない
-- 3D車両ビュー（5.8）と使用する3Dモデルは、docs/adr/ADR-002.mdのとおりで確定済みとし、質問しない
+- 3D車両ビュー（5.8）と使用する3Dモデルは、PRDのとおりで確定済みとし、質問しない
 - 質問は重要なものから最大5問まで
 - 回答をもとに決まった内容を、PRD.mdの末尾に「確定事項」として追記する
 
@@ -282,11 +276,11 @@ docs/glossary.mdとして作成してください。
 ### 参加者が入力するプロンプト
 
 ```text
-PRD.md、docs/glossary.md、docs/adr/ADR-002.mdを確認してください。
+PRD.md、docs/glossary.mdを確認してください。
 
 このハンズオンに適したWebアプリケーションの
 技術構成を検討してください。
-3D表示についてはADR-002で決定済みのため、
+3D表示についてはPRD 5.8で決定済みのため、
 それと矛盾しない構成にしてください。
 
 以下を考慮してください。
@@ -310,13 +304,11 @@ docs/adr/ADR-001.mdとして記録してください。
 - 採用した技術だけでなく、採用理由を説明しているか
 - 1時間のハンズオンという制約を考慮しているか
 - PlaywrightによるE2Eテストが可能な構成になっているか
-- ADR-002（three.jsの採用）と矛盾していないか
+- PRD 5.8（3D車両ビュー）と矛盾していないか
 
 ### 伝えたいポイント
 
 > ADRは「何を使うか」だけでなく、「どのような制約があり、なぜその技術を選んだか」を残すための記録です。
->
-> 講師が用意したADR-002には、「リアルな車にしたいが、公開リポジトリにはライセンス不明のモデルを置けない」という制約から、モデルごとに配布方法を分けた経緯が残っています。こうした判断は、コードを読んでも分かりません。
 
 ---
 
@@ -360,7 +352,7 @@ PRD.mdの画面要件をもとに、画面モックを mock/index.html として
 ### 参加者が入力するプロンプト
 
 ```text
-PRD.md、docs/glossary.md、docs/adr/ADR-001.md、docs/adr/ADR-002.md、mock/index.htmlを確認してください。
+PRD.md、docs/glossary.md、docs/adr/ADR-001.md、mock/index.htmlを確認してください。
 
 これらに従ってアプリを開発します。
 まず実装計画を作成してください。
@@ -409,7 +401,7 @@ PRD.md、docs/glossary.md、docs/adr/ADR-001.md、docs/adr/ADR-002.md、mock/ind
 ```text
 計画に問題ありません。
 
-PRD.md、docs/glossary.md、docs/adr/ADR-001.md、docs/adr/ADR-002.mdに従って
+PRD.md、docs/glossary.md、docs/adr/ADR-001.mdに従って
 アプリを実装してください。
 
 実装後に、基本的な動作確認まで行ってください。
@@ -657,7 +649,7 @@ PRDと実装を照合する
 - [ ] `PRD.md`が配置されている
 - [ ] `data/vehicles.json`が配置されている
 - [ ] `CLAUDE.md`が配置されている
-- [ ] `docs/adr/ADR-002.md`と`public/models/car-concept.glb`が配置されている
+- [ ] `public/models/car-concept.glb`が配置されている
 - [ ] 参加者のブラウザとPlaywrightのブラウザでWebGLが使える
 - [ ] RAV4風モデルを使う場合、READMEのコマンドで`public/models/rav4.glb`を取得できる
 - [ ] Node.jsなど、採用構成に必要な実行環境が利用できる

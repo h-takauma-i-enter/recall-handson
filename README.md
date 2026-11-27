@@ -70,8 +70,7 @@ recall-handson/
 ├── docs/
 │   ├── glossary.md
 │   └── adr/
-│       ├── ADR-001.md
-│       └── ADR-002.md
+│       └── ADR-001.md
 ├── public/
 │   └── models/
 │       ├── car-concept.glb
@@ -83,7 +82,7 @@ recall-handson/
 └── playwright.config.*
 ```
 
-`docs/adr/ADR-002.md`（3D車両ビューと3Dモデルの選定）と`public/models/car-concept.glb`は作成済みです。`docs/glossary.md`、`docs/adr/ADR-001.md`、アプリケーションファイル、`tests/`、`package.json`、`playwright.config.*`は未作成です。実際の構成はADRで決定した技術構成に応じて変わる場合があります。
+`public/models/car-concept.glb`は作成済みです。`docs/glossary.md`、`docs/adr/ADR-001.md`、アプリケーションファイル、`tests/`、`package.json`、`playwright.config.*`は未作成です。実際の構成はADRで決定した技術構成に応じて変わる場合があります。
 
 ### 3Dモデル
 
@@ -92,7 +91,7 @@ recall-handson/
 > 3Dモデル：Car Concept by Eric Chadwick, © 2024 Darmstadt Graphics Group GmbH ([CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/))
 > 出典：[KhronosGroup/glTF-Sample-Assets](https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept)
 
-RAV4風モデルを使う場合は、次のコマンドで取得します（任意）。ライセンス表記がないため、gitには含めず、社内ハンズオンの範囲でのみ使用してください（ADR-002）。
+RAV4風モデルを使う場合は、次のコマンドで取得します（任意）。ライセンス表記がないため、gitには含めず、社内ハンズオンの範囲でのみ使用してください。
 
 ```bash
 curl -L -o public/models/rav4.glb https://raw.githubusercontent.com/jnibarger01/toyota-showroom/HEAD/assets/imported/toyota-rav4-showroom.glb
@@ -109,7 +108,6 @@ curl -L -o public/models/rav4.glb https://raw.githubusercontent.com/jnibarger01/
 | `CLAUDE.md` | Claude Codeが守るプロジェクトルールを定義する | Claude Code |
 | `docs/glossary.md` | 業務用語の意味を揃える | 開発者、Claude Code |
 | `docs/adr/ADR-001.md` | 技術選定と判断理由を記録する | 開発者、レビュー担当者 |
-| `docs/adr/ADR-002.md` | 3D車両ビューの実装方法と3Dモデルの選定・配布方法を記録する | 開発者、レビュー担当者 |
 | `data/vehicles.json` | サンプルの車両・リコールデータを保持する | アプリケーション、テスト |
 | `public/models/` | 3D車両ビューで表示する3Dモデルを置く | アプリケーション |
 

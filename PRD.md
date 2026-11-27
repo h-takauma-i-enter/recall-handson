@@ -171,7 +171,6 @@ Claude Codeを使用し、次の開発工程を一通り体験する。
 - Car ConceptのKhronos Groupのロゴ（Khronosロゴ、3D Commerceロゴ）は表示しない。ロゴはCC-BYの許諾の対象外のため。
   - ロゴを含むパーツ（`InteriorSteeringEmblem`、`License Plate`）は非表示にする。
   - タイヤ側面のロゴはテクスチャに描かれているため、マテリアル `Tireside` のテクスチャを外し、無地の黒で表示する。
-- 判断の経緯は `docs/adr/ADR-002.md` に記録する。
 
 #### 部位とモデルのパーツの対応
 
